@@ -1,18 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
 
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+// import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
 import Abouts from './components/Abouts/Abouts';
 import Friends from './components/Friends/Friends';
 import NotFound from './components/NotFound/NotFound';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
 
 
+
+      <Router>
         <Switch>
           <Route path="/home">
             <Home></Home>
@@ -31,9 +33,7 @@ function App() {
             <NotFound></NotFound>
           </Route>
         </Switch>
-
-
-      </BrowserRouter>
+      </Router>
 
     </div>
   );

@@ -9,7 +9,7 @@ import NotFound from './components/NotFound/NotFound';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import FriendDetail from './components/FriendDetail/FriendDetail';
-import Culture from './Culture/Culture';
+import Culture from './components/Culture/Culture';
 
 function App() {
   return (

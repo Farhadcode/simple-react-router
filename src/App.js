@@ -7,6 +7,9 @@ import Abouts from './components/Abouts/Abouts';
 import Friends from './components/Friends/Friends';
 import NotFound from './components/NotFound/NotFound';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Header from './components/Header/Header';
+import FriendDetail from './components/FriendDetail/FriendDetail';
+import Culture from './Culture/Culture';
 
 function App() {
   return (
@@ -15,17 +18,23 @@ function App() {
 
 
       <Router>
+        <Header />
         <Switch>
           <Route path="/home">
             <Home></Home>
           </Route>
-          <Route path="/about">
+          <Route exact path="/about">
             <Abouts></Abouts>
           </Route>
-          <Route path="/friend">
+          <Route path="/friends">
             <Friends></Friends>
           </Route>
-
+          <Route path="/friend/:friendId">
+            <FriendDetail></FriendDetail>
+          </Route>
+          <Route exact path="/about/culture">
+            <Culture></Culture>
+          </Route>
           <Route exact path="/">
             <Home></Home>
           </Route>
